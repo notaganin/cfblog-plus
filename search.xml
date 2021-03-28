@@ -4,7 +4,7 @@
 		<title>CFBlog-Plus更新日志，持续更新【2021年3月28日】</title>
 		<content># 本页更新日志说明
 
-&gt; 所有更新日志,将集中在本文,持续更新
+&amp;gt; 所有更新日志,将集中在本文,持续更新
 
 CFBlog-Plus项目地址：https://github.com/Arronlong/cfblog-plus
 
@@ -20,40 +20,40 @@ CFBlog-Plus演示网站：https://blog.arrontg.cf
 ---
 # 2021年3月28日更新日志
 
-&gt; 1.近期文章规则调整
+&amp;gt; 1.近期文章规则调整
 
 为文章添加了最后更新时间的属性，近期文章将以最后更新时间为倒序的文章作为结果进行呈现
 
-&gt; 2.实现文章隐藏功能
+&amp;gt; 2.实现文章隐藏功能
 
 被设置隐藏的文章啊，仅在后台文章列表中可见，且标题前带有[隐藏]前缀字样，可通过`OPT.hidden_flag`和`OPT.hidden_flag_style`来自定义隐藏前缀和css样式
 
-&gt; 3.添加后台首页选择功能
+&amp;gt; 3.添加后台首页选择功能
 
 可通过参数`OPT.admin_home_idx`进行后台首页tab选择，索引取值：1-我的文章,2-新建,3-设置,4-发布
 
-&gt; 4.实现文章置顶功能
+&amp;gt; 4.实现文章置顶功能
 
 具体修改如下：
 - 在新建和编辑文章时，可以选择是否置顶
 - 前后台文章列表页均会将置顶的文章排列在最前面，且最新置顶的文章排在最前面，并带有[置顶]前缀，可通过参数`OPT.top_flag`和`OPT.top_flag_style`来自定义置顶前缀和css样式
 - 文章内容页、上一篇、下一篇以及近期文章列表中的文章如果为置顶文章，则标题同样会带有[置顶]前缀
 
-&gt; 5.文章浏览页添加编辑直达功能
+&amp;gt; 5.文章浏览页添加编辑直达功能
 
 在浏览文章时，在文章附属属性行末会显示“编辑”字样，点击后，直达文章编辑页
 
 ---
 # 2021年2月1日更新日志
 
-&gt; md编辑器的工具栏上添加解析HTML标签开关
+&amp;gt; md编辑器的工具栏上添加解析HTML标签开关
 
 ![](https://cdn.jsdelivr.net/gh/Arronlong/cdn@master/blogImg/20210201005350.png)
 
 ---
 # 2020-01-31更新日志
 
-&gt; 发布CFBlog-Plus
+&amp;gt; 发布CFBlog-Plus
 
 ### 更新内容
 
@@ -84,9 +84,9 @@ CFBlog-Plus作为CFBlog的升级版，在自主开源了index_plus.js外，还�
 - [ ] 文章独立密码
 - [ ] 静态搜索
 
-CFBlog-Plus项目地址：&lt;https://github.com/Arronlong/cfblog-plus&gt;
+CFBlog-Plus项目地址：&amp;lt;https://github.com/Arronlong/cfblog-plus&amp;gt;
 
-CFBlog-Plus演示网站：&lt;https://blog.arrontg.cf&gt;
+CFBlog-Plus演示网站：&amp;lt;https://blog.arrontg.cf&amp;gt;
 
 ## 部署步骤
 
@@ -108,8 +108,8 @@ CFBlog-Plus演示网站：&lt;https://blog.arrontg.cf&gt;
 打开[API令牌](https://dash.cloudflare.com/profile/api-tokens)管理页面，点击“创建令牌”按钮，页面拉到最下面，点击“创建自定义令牌”后面的“开始使用”按钮，按以下方式填写。
 
 令牌名字：`PurgeCache-CFBlog`
-缓存权限：`区域 -&gt; 缓存清除 -&gt; 清除`
-区域资源：`包括 -&gt; 特定区域 -&gt; 【您的域名】`
+缓存权限：`区域 -&amp;gt; 缓存清除 -&amp;gt; 清除`
+区域资源：`包括 -&amp;gt; 特定区域 -&amp;gt; 【您的域名】`
 ![](https://cdn.jsdelivr.net/gh/Arronlong/cdn@master/blogImg/20210131181139.png)
 
 以上设置完成后，点击最下面的“继续以显示摘要”，然后点击“创建令牌”按钮，然后点击“Copy”按钮将Token复制出来，后续会用到。如下图所示：
@@ -131,7 +131,7 @@ CFBlog-Plus演示网站：&lt;https://blog.arrontg.cf&gt;
 
 将[index_plus.js](https://github.com/Arronlong/cfblog-plus/blob/master/index_plus.js)中的内容替换workers的内容。
 
-先不修改配置，然后点击“保存并部署”。然后点击“&lt;”箭头，返回该workers的配置页面，自行“重命名”，然后“设置”选项卡，添加“KV 命名空间绑定”，变量名随意起，推荐用`CFBLOG`，下拉选择新添加的KV命名空间，点击“保存按钮”。
+先不修改配置，然后点击“保存并部署”。然后点击“&amp;lt;”箭头，返回该workers的配置页面，自行“重命名”，然后“设置”选项卡，添加“KV 命名空间绑定”，变量名随意起，推荐用`CFBLOG`，下拉选择新添加的KV命名空间，点击“保存按钮”。
 ![](https://cdn.jsdelivr.net/gh/Arronlong/cdn@master/blogImg/20210131193004.png)
 
 再将页面滑动上面，点击“快速编辑”，重新打开workers的编辑页面开始添加各类配置。
@@ -198,11 +198,11 @@ CFBlog-Plus演示网站：&lt;https://blog.arrontg.cf&gt;
 
 访问时带上参数就行啦，
 简单点：http://xxx.workers.dev/?msg=xxx
-复杂点：http://xxx.workers.dev/?title=xxx&description=xxx&url=xxx
+复杂点：http://xxx.workers.dev/?title=xxx&amp;description=xxx&amp;url=xxx
 
-&gt; **title** : 消息title，默认“Server酱通知”
-&gt; **description** : 消息内容，默认“通知内容”
-&gt; **url** : 跳转地址，默认“URL”
+&amp;gt; **title** : 消息title，默认“Server酱通知”
+&amp;gt; **description** : 消息内容，默认“通知内容”
+&amp;gt; **url** : 跳转地址，默认“URL”
 
 workers的代码如下：
 ```
@@ -215,7 +215,7 @@ const OPT = {
   access_token:undefined
 }
 
-addEventListener('fetch', event =&gt; {
+addEventListener('fetch', event =&amp;gt; {
   event.respondWith(handleRequest(event.request))
 })
 
@@ -249,7 +249,7 @@ async function handleRequest(request) {
 
 //获取access_token，写入OPT中
 async function getAccessToken(){
-  let result = await fetch("https://qyapi.weixin.qq.com/cgi-bin/gettoken?corpid="+OPT.corpid+"&corpsecret="+OPT.corpsecret);
+  let result = await fetch("https://qyapi.weixin.qq.com/cgi-bin/gettoken?corpid="+OPT.corpid+"&amp;corpsecret="+OPT.corpsecret);
   let json = await result.json();
   console.log(json)
   if(json.errcode==0){
@@ -307,7 +307,7 @@ async function pushMsg(title, description,url="URL",btntxt="更多"){
 
 ![内网穿透：dingtalk-pierced——钉钉开放平台官方内网穿透工具](https://cdn.jsdelivr.net/gh/peng4740/pic/2021/01/dingtalk/dingtalk.png)
 
-github地址：&lt;https://github.com/open-dingtalk/pierced&gt;
+github地址：&amp;lt;https://github.com/open-dingtalk/pierced&amp;gt;
 下面直接说使用方法吧。
 
 ## 一、下载程序
@@ -346,7 +346,7 @@ chmod +x ./ding
 2. 你启动命令的subdomain参数有可能被别人占用，尽量不要用常用字符，可以用自己公司名的拼音，例如：alibaba、dingding等。
 3. 可以在本地起个http-server服务，放置一个index.html文件，然后访问http://abcde.vaiwan.com/index.html测试一下。
 
-&gt; 修改自： haoduck.com/723.html
+&amp;gt; 修改自： haoduck.com/723.html
 </content>
 		<url>https://blog.arrontg.cf/article/000005/.html</url>
 		<time>2021-01-10</time>
@@ -361,7 +361,7 @@ chmod +x ./ding
 
 这里除了添加换行、缩进和注释外，并未做其他改动。比如
 ```
-"https://raw.githubusercontent.com/gdtool/cloudflare-workers-blog/master/themes/default/"==OPT.themeURL&&(OPT.themeURL="https://raw.githubusercontent.com/gdtool/cloudflare-workers-blog/master/themes/default2.0/")
+"https://raw.githubusercontent.com/gdtool/cloudflare-workers-blog/master/themes/default/"==OPT.themeURL&amp;&amp;(OPT.themeURL="https://raw.githubusercontent.com/gdtool/cloudflare-workers-blog/master/themes/default2.0/")
 ```
 其实正常代码应该是
 ```
@@ -466,7 +466,7 @@ if("https://raw.githubusercontent.com/gdtool/cloudflare-workers-blog/master/them
 此内容是针对default主题做的变动，目录为themes/default，如果你用的其他主题，则以下内容无效。当前已经更新了4个主题了（default,default2.0,yinwang,JustNews）。
 ---
 
-首先感谢大佬的无私奉献，让我可以白嫖到这么好的博客程序。大佬的开源项目地址：&lt;a href="https://github.com/gdtool/cloudflare-workers-blog" target="_blank"&gt;https://github.com/gdtool/cloudflare-workers-blog&lt;/a&gt;
+首先感谢大佬的无私奉献，让我可以白嫖到这么好的博客程序。大佬的开源项目地址：&amp;lt;a href="https://github.com/gdtool/cloudflare-workers-blog" target="_blank"&amp;gt;https://github.com/gdtool/cloudflare-workers-blog&amp;lt;/a&amp;gt;
 
 在使用过程中，还是遇到了一些问题，以及可以优化的地方：比如：
 
@@ -475,7 +475,7 @@ if("https://raw.githubusercontent.com/gdtool/cloudflare-workers-blog/master/them
 
 ## 添加html标签支持
 
-通过研究发现，当前大佬用的md编辑器是**Editor.md**(&lt;a href="https://github.com/pandao/editor.md)" target="_blank"&gt;github&lt;/a&gt; | &lt;a href="http://editor.md.ipandao.com/" target="_blank"&gt;官网&lt;/a&gt;)，这是一款开源的、可嵌入的 Markdown 在线编辑器（组件），基于 CodeMirror、jQuery 和 Marked 构建。在示例代码中发现&lt;a href="http://editor.md.ipandao.com/examples/html-tags-decode.html" target="_blank"&gt;识别和解析html标签&lt;/a&gt;的示例正好可以解决此类问题。
+通过研究发现，当前大佬用的md编辑器是**Editor.md**(&amp;lt;a href="https://github.com/pandao/editor.md)" target="_blank"&amp;gt;github&amp;lt;/a&amp;gt; | &amp;lt;a href="http://editor.md.ipandao.com/" target="_blank"&amp;gt;官网&amp;lt;/a&amp;gt;)，这是一款开源的、可嵌入的 Markdown 在线编辑器（组件），基于 CodeMirror、jQuery 和 Marked 构建。在示例代码中发现&amp;lt;a href="http://editor.md.ipandao.com/examples/html-tags-decode.html" target="_blank"&amp;gt;识别和解析html标签&amp;lt;/a&amp;gt;的示例正好可以解决此类问题。
 
 #### 操作方法
 
@@ -490,7 +490,7 @@ if("https://raw.githubusercontent.com/gdtool/cloudflare-workers-blog/master/them
 		mode : "markdown",
 		tex  : true,
 		tocm : true,
-		htmlDecode : true, // Decode all html tags & attributes
+		htmlDecode : true, // Decode all html tags &amp; attributes
 		//htmlDecode : "style,script,iframe,sub,sup|*" // Filter tags, and all attributes
 		codeFold : true
 	});
@@ -504,7 +504,7 @@ if("https://raw.githubusercontent.com/gdtool/cloudflare-workers-blog/master/them
 
 ### 操作方法
 
-首先解释一下配置是如何替换，直接看/themes/default/index.html文件源码，可以发现配置项都是通过`&lt;!--{opt.配置项}--&gt;`
+首先解释一下配置是如何替换，直接看/themes/default/index.html文件源码，可以发现配置项都是通过`&amp;lt;!--{opt.配置项}--&amp;gt;`
 来做为占位符，然后在cf workers中进行替换，直接搜索`opt.配置项`就能看到替换的代码了。在页面访问时，均会对这些变量做替换。
 
 了解了原理以后，改起来就比较方便了。
@@ -526,20 +526,20 @@ if("https://raw.githubusercontent.com/gdtool/cloudflare-workers-blog/master/them
 	//		tocm : true, 
 	//		codeFold : true
 	//	});
-	var mdEditor = editormd("content", &lt;!--{ myOpt.mdEditorConfig }--&gt;); //【注意：这里需要去掉{}里的空格】
+	var mdEditor = editormd("content", &amp;lt;!--{ myOpt.mdEditorConfig }--&amp;gt;); //【注意：这里需要去掉{}里的空格】
 ```
 
 修改/themes/default/index.html的链接为：
 
 ```html
-&lt;!--使用下面的方式代替了
-  &lt;aside id="meta-2" class="widget widget_meta"&gt;&lt;p class="widget-title"&gt;链接&lt;/p&gt;
-		&lt;ul&gt;
-			&lt;li&gt;&lt;a href="/admin/"&gt;管理站点&lt;/a&gt;&lt;/li&gt;
-		&lt;/ul&gt;
-	&lt;/aside&gt;
-  --&gt;
-	 &lt;!--{ myOpt.links }--&gt; &lt;!--【注意：这里需要去掉{}里的空格】--&gt;
+&amp;lt;!--使用下面的方式代替了
+  &amp;lt;aside id="meta-2" class="widget widget_meta"&amp;gt;&amp;lt;p class="widget-title"&amp;gt;链接&amp;lt;/p&amp;gt;
+		&amp;lt;ul&amp;gt;
+			&amp;lt;li&amp;gt;&amp;lt;a href="/admin/"&amp;gt;管理站点&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+		&amp;lt;/ul&amp;gt;
+	&amp;lt;/aside&amp;gt;
+  --&amp;gt;
+	 &amp;lt;!--{ myOpt.links }--&amp;gt; &amp;lt;!--【注意：这里需要去掉{}里的空格】--&amp;gt;
 ```
 
 然后将修改提交到git项目上。
@@ -558,12 +558,12 @@ const myOPT = {
     //  links-主页链接
     //  mdEditorConfig-编辑页md编辑器配置，支持解析html,方便支持视图、新标签页跳转等
     "links":`
-	&lt;aside id="meta-2" class="widget widget_meta"&gt;&lt;p class="widget-title"&gt;链接&lt;/p&gt;
-		&lt;ul&gt;
-			&lt;li&gt;&lt;a href="/admin/"&gt;管理站点&lt;/a&gt;&lt;/li&gt;
-			&lt;li&gt;&lt;a href="https://console.leancloud.app/" target="_blank"&gt;管理评论&lt;/a&gt;&lt;/li&gt;
-		&lt;/ul&gt;
-	&lt;/aside&gt;
+	&amp;lt;aside id="meta-2" class="widget widget_meta"&amp;gt;&amp;lt;p class="widget-title"&amp;gt;链接&amp;lt;/p&amp;gt;
+		&amp;lt;ul&amp;gt;
+			&amp;lt;li&amp;gt;&amp;lt;a href="/admin/"&amp;gt;管理站点&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+			&amp;lt;li&amp;gt;&amp;lt;a href="https://console.leancloud.app/" target="_blank"&amp;gt;管理评论&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+		&amp;lt;/ul&amp;gt;
+	&amp;lt;/aside&amp;gt;
     `,
     "mdEditorConfig":`
     {
@@ -576,7 +576,7 @@ const myOPT = {
         tex  : true,
         tocm : true, 
         codeFold : true,
-        htmlDecode : true // Decode all html tags & attributes
+        htmlDecode : true // Decode all html tags &amp; attributes
         // Filter tags/attributes expression : tagName,tagName,...|attrName,attrName,...
         //htmlDecode : "style,script,iframe,sub,sup|on*"  // Filter tags, and all on* attributes
         //htmlDecode : "style,script,iframe,sub,sup|*"    // Filter tags, and all attributes
@@ -600,9 +600,9 @@ const myOPT = {
 然后保存部署即可。
 
 ### 结尾
-至此，修改均已完成，如果不生效，在cf的域名-》缓存-&gt;配置-&gt;点击"清除所有内容"进行缓存清除，操作完毕后，在cf blog中按Ctrl+F5进行多次强制刷新一下页面即可。
+至此，修改均已完成，如果不生效，在cf的域名-》缓存-&amp;gt;配置-&amp;gt;点击"清除所有内容"进行缓存清除，操作完毕后，在cf blog中按Ctrl+F5进行多次强制刷新一下页面即可。
 
-当然也可以直接在域名-&gt;概述，开启“开发模式”，这样cf不会使用静态资源缓存，可以放心调试了，3小时后自动关闭。</content>
+当然也可以直接在域名-&amp;gt;概述，开启“开发模式”，这样cf不会使用静态资源缓存，可以放心调试了，3小时后自动关闭。</content>
 		<url>https://blog.arrontg.cf/article/000002/.html</url>
 		<time>2021-01-02</time>
 	</blog>
@@ -616,30 +616,30 @@ const myOPT = {
 [百度](https://www.baidu.com/)
 
 直接连接
-&lt;https://baidu.com/&gt;
+&amp;lt;https://baidu.com/&amp;gt;
 
 新标签页打开：
 [百度-md无效](https://www.baidu.com/){:target="_blank"}
-&lt;a href="https://baidu.com/" target="_blank"&gt;百度-A标签有效&lt;/a&gt;
+&amp;lt;a href="https://baidu.com/" target="_blank"&amp;gt;百度-A标签有效&amp;lt;/a&amp;gt;
 
 
 折叠
-&lt;details&gt;
-  &lt;summary&gt;点击时的区域标题&lt;/summary&gt;
+&amp;lt;details&amp;gt;
+  &amp;lt;summary&amp;gt;点击时的区域标题&amp;lt;/summary&amp;gt;
 这是折叠的代码1
 这是折叠的代码2
-&lt;/details&gt;
+&amp;lt;/details&amp;gt;
 
 图片
 ![](https://s3.ax1x.com/2021/01/01/rxnXS1.jpg)
 
 HTML-Video标签
-&lt;video src="https://media.w3.org/2010/05/sintel/trailer.mp4" controls="controls" width="640" height="320" autoplay="autoplay"&gt;&lt;br&gt;Your browser does not support the video tag.&lt;br&gt;&lt;/video&gt;
+&amp;lt;video src="https://media.w3.org/2010/05/sintel/trailer.mp4" controls="controls" width="640" height="320" autoplay="autoplay"&amp;gt;&amp;lt;br&amp;gt;Your browser does not support the video tag.&amp;lt;br&amp;gt;&amp;lt;/video&amp;gt;
 
 HTML-Iframe标签
-&lt;iframe width=100% height="418" src="//player.bilibili.com/player.html?aid=755693579&bvid=BV1R64y1f7zM&cid=267216417&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"&gt; &lt;/iframe&gt;
+&amp;lt;iframe width=100% height="418" src="//player.bilibili.com/player.html?aid=755693579&amp;bvid=BV1R64y1f7zM&amp;cid=267216417&amp;page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"&amp;gt; &amp;lt;/iframe&amp;gt;
 
-&lt;iframe width=100% height="418" src="//www.baidu.com//" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"&gt; &lt;/iframe&gt;
+&amp;lt;iframe width=100% height="418" src="//www.baidu.com//" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"&amp;gt; &amp;lt;/iframe&amp;gt;
 </content>
 		<url>https://blog.arrontg.cf/article/000001/.html</url>
 		<time>2020-12-24</time>
