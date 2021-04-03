@@ -435,7 +435,7 @@ async function handle_article(id){
     let articles_sibling=await getSiblingArticle(id);
     
     //处理文章属性（年月日、url等）
-    processArticleProp(articles_show);
+    processArticleProp(articles_sibling);
     
     //获取本篇文章
     let article=articles_sibling[1];
@@ -492,7 +492,7 @@ async function handle_admin(request){
                         
         //添加后台首页配置
         if(OPT.admin_home_idx && OPT.admin_home_idx>=1 && OPT.admin_home_idx<=4){
-          html = html.replace("$('#myTab li:eq(0) 1').tab('show')","$('#myTab a:eq("+OPT.admin_home_idx+")').tab('show')")
+          html = html.replace("$('#myTab li:eq(0) 1').tab('show')","$($('#myTab a[href*=\"'+location.hash+'\"]')[0]||$('#myTab a:eq("+OPT.admin_home_idx+")')).tab('show')")
         }
         //添加置顶样式
         if(OPT.top_flag_style){
@@ -859,6 +859,17 @@ async function handle_admin(request){
 function parseBasicAuth(request){
     const auth=request.headers.get("Authorization");
     if(!auth||!/^Basic [A-Za-z0-9._~+/-]+=*$/i.test(auth)){
+        const token = request.headers.get("Token");
+        if(!token){
+            //获取url请求对象
+            let url=new URL(request.url)
+            let paths=url.pathname.trim("/").split("/")
+
+            //校验权限
+            if("admin"==paths[0] && "search.xml"==paths[1]){
+                return token === OPT.third_token
+            }
+        }
         return false;
     }
     const[user,pwd]=atob(auth.split(" ").pop()).split(":");
