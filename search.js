@@ -20,7 +20,7 @@ tmpDiv.className = 'result-item';
 var xhr = new XMLHttpRequest() || new ActiveXObject('Microsoft.XMLHTTP');
 xhr.onreadystatechange = function () {
     if (xhr.readyState == 4 && xhr.status == 200) {
-        xml = xhr.responseXML;
+        xml = xhr.xhr.responseXML;
         arrItems = xml.getElementsByTagName('blog');
         itemLength = arrItems.length;
         
@@ -38,7 +38,7 @@ xhr.onreadystatechange = function () {
 }
 
 // 开始获取根目录下 search.xml 文件内的数据
-xhr.open('get', 'https://cdn.jsdelivr.net/gh/Arronlong/cfblog-plus@search/search.xml', true);
+xhr.open('get', '/search.xml', true);
 xhr.send();
 
 searchBtn.onclick = searchConfirm;
